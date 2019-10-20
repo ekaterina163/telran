@@ -1,0 +1,26 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int numberOfCreditsInMonthMasha = 50;
+        int numberOfCreditsInMonthPetya =  (int) (0.8 * numberOfCreditsInMonthMasha);
+        int numberOfCreditsInMonthLazyVasya =  (int) (0.5 * numberOfCreditsInMonthMasha);
+        int numberOfCreditsInMonthMotivatedVasya = numberOfCreditsInMonthMasha;
+        int sumOfCreditsInMonthByAll = 0;
+        int totalPlan = 2100;
+        int monthNumber = 0;
+
+
+        while (sumOfCreditsInMonthByAll < 1370) {
+            monthNumber++;
+            sumOfCreditsInMonthByAll = numberOfCreditsInMonthMasha + numberOfCreditsInMonthPetya + numberOfCreditsInMonthLazyVasya + sumOfCreditsInMonthByAll;
+            System.out.println("Loan: "+sumOfCreditsInMonthByAll +" Month N:"+ monthNumber);
+        }
+        while (sumOfCreditsInMonthByAll <= totalPlan){
+            monthNumber++;
+            sumOfCreditsInMonthByAll =  numberOfCreditsInMonthMasha + numberOfCreditsInMonthPetya + numberOfCreditsInMonthMotivatedVasya + sumOfCreditsInMonthByAll;
+           System.out.println("Loan: "+sumOfCreditsInMonthByAll +" Month N:"+ monthNumber);
+       }
+    }
+}
